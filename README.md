@@ -9,14 +9,14 @@ Snowflake database.
 
 Add `:moat_dbc` as a dependency in your `mix.exs`:
 
-  {:moat_dbc, git: "https://github.com/mckuzyk/moat_dbc.git", tag: "0.1.1"}
+  `{:moat_dbc, git: "https://github.com/mckuzyk/moat_dbc.git", tag: "0.1.1"}`
 
 In Livebook, you must additionally download the snowflake driver:
 
 ```
 Mix.Install(
   [
-    {:moat_dbc, git: "https://github.com/mckuzyk/moat_dbc.git", tag: "0.1.0"}
+    {:moat_dbc, git: "https://github.com/mckuzyk/moat_dbc.git", tag: "0.1.1"}
   ],
   config: [adbc: [drivers: [:snowflake]]]
 )
