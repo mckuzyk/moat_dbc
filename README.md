@@ -1,21 +1,23 @@
 # MoatDbc
 
-**TODO: Add description**
+Moat database connector.
+
+MoatDbc provides a convenience method to connect to Moat's
+Snowflake database.
 
 ## Installation
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `moat_dbc` to your list of dependencies in `mix.exs`:
+Add `:moat_dbc` as a dependency in your `mix.exs`:
 
-```elixir
-def deps do
-  [
-    {:moat_dbc, "~> 0.1.0"}
-  ]
-end
+  {:moat_dbc, git: "https://github.com/mckuzyk/moat_dbc.git", tag: "0.1.1"}
+
+In Livebook, you must additionally download the snowflake driver:
+
 ```
-
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at <https://hexdocs.pm/moat_dbc>.
-
+Mix.Install(
+  [
+    {:moat_dbc, git: "https://github.com/mckuzyk/moat_dbc.git", tag: "0.1.0"}
+  ],
+  config: [adbc: [drivers: [:snowflake]]]
+)
+```
